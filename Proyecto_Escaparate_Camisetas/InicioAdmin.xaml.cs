@@ -21,7 +21,7 @@ namespace Proyecto_Escaparate_Camisetas
     {
         public InicioAdmin()
         {
-            //duda
+            
             InitializeComponent();
         }
     }
