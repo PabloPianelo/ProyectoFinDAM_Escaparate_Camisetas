@@ -90,6 +90,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Clases\Usuarios.cs" />
     <Compile Include="InicioAdmin.xaml.cs">
       <DependentUpon>InicioAdmin.xaml</DependentUpon>
     </Compile>
@@ -99,7 +100,9 @@
     <Compile Include="Registro.xaml.cs">
       <DependentUpon>Registro.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Registro_Login\ConexionBD.cs" />
+    <Compile Include="BD\ConexionBD.cs" />
+    <Compile Include="Registro_Login\Controlador.cs" />
+    <Compile Include="BD\Modelo.cs" />
     <Page Include="InicioAdmin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

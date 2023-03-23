@@ -7,13 +7,13 @@
         mc:Ignorable="d"
         Title="Login" Height="450" Width="800">
     <Grid>
-        <Button Content="Iniciar" HorizontalAlignment="Left" Margin="260,239,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="-0.61,0.56"/>
+        <Button Content="Iniciar" HorizontalAlignment="Left" Margin="260,239,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="-0.61,0.56" Click="Button_Click_1"/>
         <Button Content="Registrarte" HorizontalAlignment="Left" Margin="383,239,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="-0.61,0.56" Click="Button_Click"/>
 
-        
-        
-        <PasswordBox HorizontalAlignment="Left" Margin="260,199,0,0" VerticalAlignment="Top" Width="198" />
-        <TextBox HorizontalAlignment="Left" Height="18" Margin="260,165,0,0"  VerticalAlignment="Top" Width="198"/>
+
+
+        <PasswordBox Name="pass"  HorizontalAlignment="Left" Margin="260,199,0,0" VerticalAlignment="Top" Width="198" />
+        <TextBox Name="nombre" HorizontalAlignment="Left" Height="18" Margin="260,165,0,0"  VerticalAlignment="Top" Width="198"/>
 
     </Grid>
 </Window>

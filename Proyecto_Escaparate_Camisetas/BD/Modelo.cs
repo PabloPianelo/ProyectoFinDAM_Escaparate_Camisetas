@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Proyecto_Escaparate_Camisetas.Registro_Login
+namespace Proyecto_Escaparate_Camisetas.BD
 {
     class Modelo
     {
@@ -15,7 +15,7 @@ namespace Proyecto_Escaparate_Camisetas.Registro_Login
 
             MySqlConnection conexion = conexionBD.conexion();
 
-            String sql = "INSERT INTO usuario (nombre,pass) VALUES (" + "'" + usuario.Nombre + "'," + "'" + usuario.Pass + "')";
+            String sql = "INSERT INTO usuario (nombre,contraseña,rol) VALUES (" + "'" + usuario.Nombre + "'," + "'" + usuario.Contraseña + "',false)";
 
             MySqlCommand command = new MySqlCommand(sql, conexion);
 
@@ -57,7 +57,7 @@ namespace Proyecto_Escaparate_Camisetas.Registro_Login
             MySqlDataReader reader = null;
             MySqlConnection conexion = class1.conexion();
 
-            String sql = "SELECT nombre,pass FROM usuario where nombre=" + "'" + usuario + "'";
+            String sql = "SELECT nombre,contraseña FROM usuario where nombre=" + "'" + usuario + "'";
 
             MySqlCommand command = new MySqlCommand(sql, conexion);
 
@@ -71,12 +71,35 @@ namespace Proyecto_Escaparate_Camisetas.Registro_Login
             {
                 usr = new Clases.Usuarios();
                 usr.Nombre = reader["nombre"].ToString();
-                usr.Pass = reader["pass"].ToString();
+                usr.Contraseña = reader["contraseña"].ToString();
 
             }
             class1.cerrarConexion();
             return usr;
 
+
+        }
+
+        public String adminorUsuario(String nombre)
+        {
+            BD.ConexionBD class1 = new BD.ConexionBD();
+            MySqlDataReader reader = null;
+            MySqlConnection conexion = class1.conexion();
+            String result = " ";
+            String sql = "SELECT rol FROM usuario where nombre=" + "'" + nombre + "'";
+            MySqlCommand command = new MySqlCommand(sql, conexion);
+            reader = command.ExecuteReader();
+
+            while (reader.Read())
+            {
+
+                result = reader["rol"].ToString();
+               
+
+            }
+            
+            class1.cerrarConexion();
+            return result;
 
         }
     }

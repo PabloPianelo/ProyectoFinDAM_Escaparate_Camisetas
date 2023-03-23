@@ -7,10 +7,10 @@
         mc:Ignorable="d"
         Title="Registro" Height="450" Width="800">
     <Grid>
-        <Button Content="Registrarte" HorizontalAlignment="Left" Margin="308,244,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="-0.61,0.56"/>
-        <PasswordBox HorizontalAlignment="Left" Margin="260,199,0,0" VerticalAlignment="Top" Width="198" />
-        <TextBox HorizontalAlignment="Left" Height="18" Margin="260,165,0,0"  VerticalAlignment="Top" Width="198"/>
-        <TextBox HorizontalAlignment="Left" Height="18" Margin="260,131,0,0"  VerticalAlignment="Top" Width="198"/>
-        <Label Content="Label" HorizontalAlignment="Left" Margin="260,100,0,0" VerticalAlignment="Top" Width="45"/>
+        <Button Content="Registrarte" HorizontalAlignment="Left" Margin="260,244,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="-0.61,0.56" Click="Button_Click"/>
+        <PasswordBox Name="txtPass" HorizontalAlignment="Left" Margin="260,199,0,0" VerticalAlignment="Top" Width="198" />
+        <TextBox Name="txtNombre" HorizontalAlignment="Left" Height="18" Margin="260,167,0,0"  VerticalAlignment="Top" Width="198"/>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="260,136,0,0" VerticalAlignment="Top" Width="45"/>
+        <Button Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="383,244,0,0"/>
     </Grid>
 </Window>

@@ -23,5 +23,40 @@ namespace Proyecto_Escaparate_Camisetas
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+           Clases.Usuarios usuario = new Clases.Usuarios();
+            usuario.Nombre = txtNombre.Text;
+            usuario.Contraseña = txtPass.Password;
+
+
+
+
+            try
+            {
+
+                Registro_Login.Controlador controlador = new Registro_Login.Controlador();
+
+                string respuesta = controlador.ctrRegistro(usuario);
+
+                if (respuesta.Length > 0)
+                {
+                    MessageBox.Show(respuesta);
+                }
+                else
+                {
+                    MessageBox.Show("Usuario reguistrado");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+
+        }
     }
-}
+    }
+
