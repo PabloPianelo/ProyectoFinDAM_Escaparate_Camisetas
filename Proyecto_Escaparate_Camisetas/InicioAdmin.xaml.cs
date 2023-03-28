@@ -30,5 +30,12 @@ namespace Proyecto_Escaparate_Camisetas
             admin.Show();
             this.Close();
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            AdministradorCamisetas administrador = new AdministradorCamisetas();
+            administrador.Show();
+            this.Close();
+        }
     }
 }

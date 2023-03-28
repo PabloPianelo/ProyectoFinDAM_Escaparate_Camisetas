@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-G:\Proyecto\Proyecto_Escaparate_Camisetas\Proyecto_Escaparate_Camisetas\obj\Debug\
+H:\Proyecto\Proyecto_Escaparate_Camisetas\Proyecto_Escaparate_Camisetas\obj\Debug\
 Proyecto_Escaparate_Camisetas
 none
 false
 DEBUG;TRACE
-G:\Proyecto\Proyecto_Escaparate_Camisetas\Proyecto_Escaparate_Camisetas\App.xaml
-51114043561
+H:\Proyecto\Proyecto_Escaparate_Camisetas\Proyecto_Escaparate_Camisetas\App.xaml
+61780535733
 
-14-82892844
-28-445423358
-AdministradorUsuarios.xaml;InicioAdmin.xaml;InicioUsuario.xaml;Login.xaml;Registro.xaml;
+161698018489
+28-1929806452
+AdministradorCamisetas.xaml;AdministradorUsuarios.xaml;InicioAdmin.xaml;InicioUsuario.xaml;Login.xaml;Registro.xaml;
 
-False
+True
 

@@ -78,6 +78,14 @@ namespace Proyecto_Escaparate_Camisetas {
             #line default
             #line hidden
             return;
+            case 2:
+            
+            #line 11 "..\..\InicioAdmin.xaml"
+            ((System.Windows.Controls.Button)(target)).Click += new System.Windows.RoutedEventHandler(this.Button_Click_1);
+            
+            #line default
+            #line hidden
+            return;
             }
             this._contentLoaded = true;
         }

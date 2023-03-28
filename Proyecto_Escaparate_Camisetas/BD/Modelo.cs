@@ -9,6 +9,9 @@ namespace Proyecto_Escaparate_Camisetas.BD
 {
     class Modelo
     {
+
+
+        //registro
         public int registro(Clases.Usuarios usuario)
         {
             BD.ConexionBD conexionBD = new BD.ConexionBD();
@@ -25,6 +28,7 @@ namespace Proyecto_Escaparate_Camisetas.BD
 
              
         }
+
 
         public bool existeUsuario(String usuario)
         {
@@ -102,5 +106,30 @@ namespace Proyecto_Escaparate_Camisetas.BD
             return result;
 
         }
+
+
+        //Admi
+
+        public int insertarCamiseta(Clases.Camiseta camiseta)
+        {
+            BD.ConexionBD conexionBD = new BD.ConexionBD();
+
+            MySqlConnection conexion = conexionBD.conexion();
+
+            String sql = "INSERT INTO usuario (nombre,colorCamiseta,img_Camiseta) VALUES (" + "'" + camiseta.Nombre + "'," + "'" + camiseta.ColorCamiseta + "',"+ "'" + camiseta.Img + "')";
+
+            MySqlCommand command = new MySqlCommand(sql, conexion);
+
+            int resultado = command.ExecuteNonQuery();
+            conexionBD.cerrarConexion();
+            return resultado;
+
+
+        }
+
+
+
+
+
     }
 }
