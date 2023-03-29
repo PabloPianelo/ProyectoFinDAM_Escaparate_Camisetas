@@ -116,7 +116,24 @@ namespace Proyecto_Escaparate_Camisetas.BD
 
             MySqlConnection conexion = conexionBD.conexion();
 
-            String sql = "INSERT INTO usuario (nombre,colorCamiseta,img_Camiseta) VALUES (" + "'" + camiseta.Nombre + "'," + "'" + camiseta.ColorCamiseta + "',"+ "'" + camiseta.Img + "')";
+            String sql = "INSERT INTO camiseta (nombre,colorCamiseta,img_Camiseta) VALUES (" + "'" + camiseta.Nombre + "'," + "'" + camiseta.ColorCamiseta + "',"+ "'" + camiseta.Img + "')";
+
+            MySqlCommand command = new MySqlCommand(sql, conexion);
+
+            int resultado = command.ExecuteNonQuery();
+            conexionBD.cerrarConexion();
+            return resultado;
+
+
+        }
+
+        public int insertarImagen(Clases.Imagen imagen)
+        {
+            BD.ConexionBD conexionBD = new BD.ConexionBD();
+
+            MySqlConnection conexion = conexionBD.conexion();
+
+            String sql = "INSERT INTO imagen (nombre,idUsuario,colorCamiseta,img_Imagen) VALUES (" + "'" + imagen.Nombre + "'," + "'" + imagen.IdUsuario + "'," + "'" + imagen.ColorCamiseta + "',"+ "'" + imagen.Img + "')";
 
             MySqlCommand command = new MySqlCommand(sql, conexion);
 

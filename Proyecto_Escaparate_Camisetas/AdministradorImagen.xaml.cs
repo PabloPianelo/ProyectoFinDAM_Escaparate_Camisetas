@@ -16,17 +16,15 @@ using System.Windows.Shapes;
 namespace Proyecto_Escaparate_Camisetas
 {
     /// <summary>
-    /// Lógica de interacción para AdministradorCamisetas.xaml
+    /// Lógica de interacción para AdministradorImagen.xaml
     /// </summary>
-    public partial class AdministradorCamisetas : Window
+    public partial class AdministradorImagen : Window
     {
-        Clases.Camiseta camiseta = new Clases.Camiseta();
-        public AdministradorCamisetas()
+        Clases.Imagen Imagen = new Clases.Imagen();
+        public AdministradorImagen()
         {
-           
             InitializeComponent();
         }
-
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
@@ -35,12 +33,12 @@ namespace Proyecto_Escaparate_Camisetas
             if (openFileDialog.ShowDialog() == true)
             {
                 Uri uri = new Uri(openFileDialog.FileName);
-                BitmapImage bitmap= new BitmapImage(uri);
+                BitmapImage bitmap = new BitmapImage(uri);
                 img.Source = bitmap;
 
 
 
-              //  camiseta.Img = ;
+                //  camiseta.Img = ;
 
             }
         }
@@ -50,7 +48,7 @@ namespace Proyecto_Escaparate_Camisetas
 
             BD.Modelo modelo = new BD.Modelo();
 
-            modelo.insertarCamiseta(camiseta);
+            modelo.insertarImagen(Imagen);
 
 
 

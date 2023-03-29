@@ -93,10 +93,14 @@
     <Compile Include="AdministradorCamisetas.xaml.cs">
       <DependentUpon>AdministradorCamisetas.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AdministradorImagen.xaml.cs">
+      <DependentUpon>AdministradorImagen.xaml</DependentUpon>
+    </Compile>
     <Compile Include="AdministradorUsuarios.xaml.cs">
       <DependentUpon>AdministradorUsuarios.xaml</DependentUpon>
     </Compile>
     <Compile Include="Clases\Camiseta.cs" />
+    <Compile Include="Clases\Imagen.cs" />
     <Compile Include="Clases\Usuarios.cs" />
     <Compile Include="InicioAdmin.xaml.cs">
       <DependentUpon>InicioAdmin.xaml</DependentUpon>
@@ -111,6 +115,10 @@
     <Compile Include="Registro_Login\Controlador.cs" />
     <Compile Include="BD\Modelo.cs" />
     <Page Include="AdministradorCamisetas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AdministradorImagen.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

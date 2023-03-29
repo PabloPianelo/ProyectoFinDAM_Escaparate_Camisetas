@@ -1,0 +1,20 @@
+﻿<Window x:Class="Proyecto_Escaparate_Camisetas.AdministradorImagen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Proyecto_Escaparate_Camisetas"
+        mc:Ignorable="d"
+        Title="AdministradorImagen" Height="450" Width="800">
+    <Grid>
+        <Image  Name="img" HorizontalAlignment="Left" Height="227" Margin="491,53,0,0" VerticalAlignment="Top" Width="215"/>
+        <TextBox Name="nombre" HorizontalAlignment="Left" Height="22" Margin="186,146,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Color que no se le puede aplicar " HorizontalAlignment="Left" Margin="186,185,0,0" VerticalAlignment="Top"/>
+        <RadioButton Content="Rojo" HorizontalAlignment="Left" Margin="186,226,0,0" VerticalAlignment="Top"/>
+        <RadioButton Content="Azul" HorizontalAlignment="Left" Margin="186,246,0,0" VerticalAlignment="Top"/>
+        <RadioButton Content="Negro" HorizontalAlignment="Left" Margin="186,268,0,0" VerticalAlignment="Top"/>
+        <RadioButton Content="Blanco" HorizontalAlignment="Left" Margin="186,288,0,0" VerticalAlignment="Top"/>
+        <Button Content="Selecionar imagen" HorizontalAlignment="Left" Margin="529,288,0,0" VerticalAlignment="Top" Width="136" Click="Button_Click"/>
+        <Button Content="Insertar Camiseta" HorizontalAlignment="Left" Margin="344,365,0,0" VerticalAlignment="Top" Width="128" Click="Button_Click_1"/>
+    </Grid>
+</Window>
