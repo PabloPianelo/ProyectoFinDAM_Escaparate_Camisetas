@@ -86,3 +86,9 @@ G:\Proyecto\Proyecto_Escaparate_Camisetas\Proyecto_Escaparate_Camisetas\obj\Debu
 G:\Proyecto\Proyecto_Escaparate_Camisetas\Proyecto_Escaparate_Camisetas\obj\Debug\Proyecto_Escaparate_Camisetas.csproj.CopyComplete
 G:\Proyecto\Proyecto_Escaparate_Camisetas\Proyecto_Escaparate_Camisetas\obj\Debug\Proyecto_Escaparate_Camisetas.exe
 G:\Proyecto\Proyecto_Escaparate_Camisetas\Proyecto_Escaparate_Camisetas\obj\Debug\Proyecto_Escaparate_Camisetas.pdb
+H:\Proyecto\Proyecto_Escaparate_Camisetas\Proyecto_Escaparate_Camisetas\obj\Debug\AdministradorCamisetas.g.cs
+H:\Proyecto\Proyecto_Escaparate_Camisetas\Proyecto_Escaparate_Camisetas\obj\Debug\AdministradorImagen.g.cs
+H:\Proyecto\Proyecto_Escaparate_Camisetas\Proyecto_Escaparate_Camisetas\obj\Debug\AdministradorUsuarios.g.cs
+H:\Proyecto\Proyecto_Escaparate_Camisetas\Proyecto_Escaparate_Camisetas\obj\Debug\AdministradorCamisetas.baml
+H:\Proyecto\Proyecto_Escaparate_Camisetas\Proyecto_Escaparate_Camisetas\obj\Debug\AdministradorImagen.baml
+H:\Proyecto\Proyecto_Escaparate_Camisetas\Proyecto_Escaparate_Camisetas\obj\Debug\AdministradorUsuarios.baml
