@@ -167,14 +167,14 @@ namespace Proyecto_Escaparate_Camisetas.BD {
 
         }
 
+        //no se puede insertar solo uno deves de ser los dos a la vez 
 
-
-        public int insertarCamisetas_Imagenes1(long idCamiseta) {
+        public int insertarCamisetas_Imagenes(long idImagen, long idCamiseta) {
             BD.ConexionBD conexionBD = new BD.ConexionBD();
 
             MySqlConnection conexion = conexionBD.conexion();
 
-            String sql = "INSERT INTO imagen_camiseta (idCamiseta) VALUES (" + idCamiseta + ")";
+            String sql = "INSERT INTO imagen_camiseta (idImagen,idCamiseta) VALUES (" + idImagen + "," + idCamiseta + ")";
 
             MySqlCommand command = new MySqlCommand(sql, conexion);
 
@@ -183,26 +183,17 @@ namespace Proyecto_Escaparate_Camisetas.BD {
             return resultado;
 
 
-
         }
 
 
-        public int insertarCamisetas_Imagenes2(long idImagen) {
-            BD.ConexionBD conexionBD = new BD.ConexionBD();
 
-            MySqlConnection conexion = conexionBD.conexion();
+    
 
-            String sql = "INSERT INTO imagen_camiseta (idImagen) VALUES (" + idImagen + ")";
-
-            MySqlCommand command = new MySqlCommand(sql, conexion);
-
-            int resultado = command.ExecuteNonQuery();
-            conexionBD.cerrarConexion();
-            return resultado;
+      
 
 
 
-        }
+        
 
 
     }

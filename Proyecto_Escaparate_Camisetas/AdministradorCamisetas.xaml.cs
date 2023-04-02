@@ -83,7 +83,7 @@ namespace Proyecto_Escaparate_Camisetas {
                 Console.WriteLine(id_usuario);
                 Console.WriteLine(id_camiseta+" camiseta");
                 modelo.insertarCamisetas_Usuarios(id_usuario, id_camiseta);
-                modelo.insertarCamisetas_Imagenes1(id_camiseta);//duda
+               // modelo.insertarCamisetas_Imagenes1(id_camiseta);//duda
 
                 MessageBox.Show("Camiseta insertada");
 

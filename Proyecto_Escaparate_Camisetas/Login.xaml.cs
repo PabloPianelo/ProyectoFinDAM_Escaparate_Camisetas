@@ -47,7 +47,7 @@ namespace Proyecto_Escaparate_Camisetas {
                     this.Close();
                 } else {
                    
-                    InicioUsuario usuario = new InicioUsuario();
+                    InicioUsuario usuario = new InicioUsuario(nombres);
                     usuario.Show();
                     this.Close();
                 }

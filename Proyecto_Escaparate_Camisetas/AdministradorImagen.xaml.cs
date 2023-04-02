@@ -74,10 +74,9 @@ namespace Proyecto_Escaparate_Camisetas {
             if (modelo.existeUsuario(dato)) {
                 long id_usuario = modelo.idUsuario(dato);
                 imagen.IdUsuario = id_usuario;
-                long id_camiseta = modelo.insertarImagen(imagen);
-                 
-                
-              //  modelo.insertarCamisetas_Imagenes1(id_camiseta);//duda
+                long id_imagen = modelo.insertarImagen(imagen);
+
+               // modelo.insertarCamisetas_Imagenes();//duda
 
                 MessageBox.Show("Imagen insertada");
 

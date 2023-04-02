@@ -103,6 +103,9 @@
     <Compile Include="Clases\Camiseta.cs" />
     <Compile Include="Clases\Imagen.cs" />
     <Compile Include="Clases\Usuarios.cs" />
+    <Compile Include="Escaparate.xaml.cs">
+      <DependentUpon>Escaparate.xaml</DependentUpon>
+    </Compile>
     <Compile Include="InicioAdmin.xaml.cs">
       <DependentUpon>InicioAdmin.xaml</DependentUpon>
     </Compile>
@@ -124,6 +127,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="AdministradorUsuarios.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Escaparate.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -178,8 +185,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Admin\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
