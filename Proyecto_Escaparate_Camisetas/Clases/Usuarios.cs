@@ -1,13 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Proyecto_Escaparate_Camisetas.Clases
-{
-    class Usuarios
-    {
+namespace Proyecto_Escaparate_Camisetas.Clases {
+    class Usuarios {
         int idUsuario;
         String nombre, contraseña;
         Boolean rol;

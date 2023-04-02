@@ -92,3 +92,7 @@ H:\Proyecto\Proyecto_Escaparate_Camisetas\Proyecto_Escaparate_Camisetas\obj\Debu
 H:\Proyecto\Proyecto_Escaparate_Camisetas\Proyecto_Escaparate_Camisetas\obj\Debug\AdministradorCamisetas.baml
 H:\Proyecto\Proyecto_Escaparate_Camisetas\Proyecto_Escaparate_Camisetas\obj\Debug\AdministradorImagen.baml
 H:\Proyecto\Proyecto_Escaparate_Camisetas\Proyecto_Escaparate_Camisetas\obj\Debug\AdministradorUsuarios.baml
+G:\Proyecto\Proyecto_Escaparate_Camisetas\Proyecto_Escaparate_Camisetas\obj\Debug\AdministradorCamisetas.g.cs
+G:\Proyecto\Proyecto_Escaparate_Camisetas\Proyecto_Escaparate_Camisetas\obj\Debug\AdministradorImagen.g.cs
+G:\Proyecto\Proyecto_Escaparate_Camisetas\Proyecto_Escaparate_Camisetas\obj\Debug\AdministradorCamisetas.baml
+G:\Proyecto\Proyecto_Escaparate_Camisetas\Proyecto_Escaparate_Camisetas\obj\Debug\AdministradorImagen.baml

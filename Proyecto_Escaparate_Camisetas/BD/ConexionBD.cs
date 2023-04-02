@@ -1,15 +1,8 @@
 ﻿using MySql.Data.MySqlClient;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 
-namespace Proyecto_Escaparate_Camisetas.BD
-{
-    class ConexionBD
-    {
+namespace Proyecto_Escaparate_Camisetas.BD {
+    class ConexionBD {
         MySqlConnection conex = null;
 
         static string server = "localhost";
@@ -20,20 +13,16 @@ namespace Proyecto_Escaparate_Camisetas.BD
         string cadenaConexion = "Database=" + bd + "; Data Source=" + server + "; User Id=" + usuario + "; Password=" + password + "";
 
 
-        public MySqlConnection conexion()
-        {
+        public MySqlConnection conexion() {
 
-            try
-            {
+            try {
 
                 conex = new MySqlConnection(cadenaConexion);
 
                 conex.Open();
 
 
-            }
-            catch (MySqlException e)
-            {
+            } catch (MySqlException e) {
                 MessageBox.Show("Error en la base de datos " + e.ToString());
             }
 
@@ -45,8 +34,7 @@ namespace Proyecto_Escaparate_Camisetas.BD
 
 
 
-        public void cerrarConexion()
-        {
+        public void cerrarConexion() {
             conex.Close();
 
         }

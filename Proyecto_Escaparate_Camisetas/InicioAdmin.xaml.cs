@@ -1,40 +1,39 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
-namespace Proyecto_Escaparate_Camisetas
-{
+namespace Proyecto_Escaparate_Camisetas {
     /// <summary>
     /// Lógica de interacción para InicioAdmin.xaml
     /// </summary>
-    public partial class InicioAdmin : Window
-    {
-        public InicioAdmin()
-        {
-            
+    public partial class InicioAdmin : Window {
+
+
+        String dato;
+        public InicioAdmin() {
+
             InitializeComponent();
         }
+        public InicioAdmin(String dato) {
 
+            InitializeComponent();
+            this.dato = dato;
+        }
         private void Button_Click(object sender, RoutedEventArgs e) {
+            
             AdministradorUsuarios admin = new AdministradorUsuarios();
             admin.Show();
             this.Close();
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-            AdministradorCamisetas administrador = new AdministradorCamisetas();
+        private void Button_Click_1(object sender, RoutedEventArgs e) {
+            AdministradorCamisetas administrador = new AdministradorCamisetas(dato);
             administrador.Show();
+            this.Close();
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e) {
+            AdministradorImagen imagen = new AdministradorImagen(dato);
+            imagen.Show();
             this.Close();
         }
     }

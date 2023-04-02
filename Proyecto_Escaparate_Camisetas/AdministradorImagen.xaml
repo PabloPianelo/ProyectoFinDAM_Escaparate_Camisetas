@@ -10,10 +10,10 @@
         <Image  Name="img" HorizontalAlignment="Left" Height="227" Margin="491,53,0,0" VerticalAlignment="Top" Width="215"/>
         <TextBox Name="nombre" HorizontalAlignment="Left" Height="22" Margin="186,146,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
         <Label Content="Color que no se le puede aplicar " HorizontalAlignment="Left" Margin="186,185,0,0" VerticalAlignment="Top"/>
-        <RadioButton Content="Rojo" HorizontalAlignment="Left" Margin="186,226,0,0" VerticalAlignment="Top"/>
-        <RadioButton Content="Azul" HorizontalAlignment="Left" Margin="186,246,0,0" VerticalAlignment="Top"/>
-        <RadioButton Content="Negro" HorizontalAlignment="Left" Margin="186,268,0,0" VerticalAlignment="Top"/>
-        <RadioButton Content="Blanco" HorizontalAlignment="Left" Margin="186,288,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="rbRojo" Content="Rojo" HorizontalAlignment="Left" Margin="186,226,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="rbAzul" Content="Azul" HorizontalAlignment="Left" Margin="186,246,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="rbNegro" Content="Negro" HorizontalAlignment="Left" Margin="186,268,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="rbBlanco" Content="Blanco" HorizontalAlignment="Left" Margin="186,288,0,0" VerticalAlignment="Top"/>
         <Button Content="Selecionar imagen" HorizontalAlignment="Left" Margin="529,288,0,0" VerticalAlignment="Top" Width="136" Click="Button_Click"/>
         <Button Content="Insertar Camiseta" HorizontalAlignment="Left" Margin="344,365,0,0" VerticalAlignment="Top" Width="128" Click="Button_Click_1"/>
     </Grid>

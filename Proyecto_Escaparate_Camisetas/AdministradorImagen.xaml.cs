@@ -1,54 +1,92 @@
 ﻿using Microsoft.Win32;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
-namespace Proyecto_Escaparate_Camisetas
-{
+namespace Proyecto_Escaparate_Camisetas {
     /// <summary>
     /// Lógica de interacción para AdministradorImagen.xaml
     /// </summary>
-    public partial class AdministradorImagen : Window
-    {
-        Clases.Imagen Imagen = new Clases.Imagen();
-        public AdministradorImagen()
-        {
+    public partial class AdministradorImagen : Window {
+        Clases.Imagen imagen = new Clases.Imagen();
+
+
+        public AdministradorImagen() {
             InitializeComponent();
         }
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
+        String dato;
+
+        public AdministradorImagen(String dato) {
+
+            InitializeComponent();
+            this.dato = dato;
+        }
+
+
+        private void Button_Click(object sender, RoutedEventArgs e) {
+
             OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "Archivos PNG (*.PNG)|*.PNG";
+            openFileDialog.Filter = "Archivos JPG (*.JPG)|*.JPG|Archivos PNG (*.PNG)|*.PNG";
 
-            if (openFileDialog.ShowDialog() == true)
-            {
+            if (openFileDialog.ShowDialog() == true) {
                 Uri uri = new Uri(openFileDialog.FileName);
-                BitmapImage bitmap = new BitmapImage(uri);
-                img.Source = bitmap;
+                img.Source = new BitmapImage(uri);
+                System.Drawing.Image newImage = System.Drawing.Image.FromFile(openFileDialog.FileName);
+                converterDemo(newImage);
 
 
 
-                //  camiseta.Img = ;
+
 
             }
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
+        public static byte[] converterDemo(System.Drawing.Image x) {
+            System.Drawing.ImageConverter _imageConverter = new System.Drawing.ImageConverter();
+            byte[] xByte = (byte[])_imageConverter.ConvertTo(x, typeof(byte[]));
+            return xByte;
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e) {
 
             BD.Modelo modelo = new BD.Modelo();
+            imagen.Nombre = nombre.Text;
 
-            modelo.insertarImagen(Imagen);
+
+
+
+            if (rbAzul.IsChecked == true)
+                imagen.ColorCamiseta = "Azul";
+            if (rbBlanco.IsChecked == true)
+                imagen.ColorCamiseta = "Blanco";
+            if (rbNegro.IsChecked == true)
+                imagen.ColorCamiseta = "Negro";
+            if (rbRojo.IsChecked == true)
+                imagen.ColorCamiseta = "Rojo";
+
+
+
+
+
+
+
+
+            if (modelo.existeUsuario(dato)) {
+                long id_usuario = modelo.idUsuario(dato);
+                imagen.IdUsuario = id_usuario;
+                long id_camiseta = modelo.insertarImagen(imagen);
+                 
+                
+              //  modelo.insertarCamisetas_Imagenes1(id_camiseta);//duda
+
+                MessageBox.Show("Imagen insertada");
+
+            } else {
+                MessageBox.Show("Error");
+
+            }
+
+           
 
 
 
