@@ -20,13 +20,7 @@ namespace Proyecto_Escaparate_Camisetas {
             InitializeComponent();
 
         }
-        String dato;
-
-        public AdministradorCamisetas(String dato) {
-
-            InitializeComponent();
-            this.dato = dato;
-        }
+      
 
         private void Button_Click(object sender, RoutedEventArgs e) {
 
@@ -77,13 +71,13 @@ namespace Proyecto_Escaparate_Camisetas {
 
 
 
-            if (modelo.existeUsuario(dato)) {
+            if (modelo.existeUsuario(Singleton.RepositorioAplicacion.Instance.Nombre)) {
                 long id_camiseta = modelo.insertarCamiseta(camiseta);
-                long id_usuario = modelo.idUsuario(dato);
+                long id_usuario = modelo.idUsuario(Singleton.RepositorioAplicacion.Instance.Nombre);
                 Console.WriteLine(id_usuario);
                 Console.WriteLine(id_camiseta+" camiseta");
                 modelo.insertarCamisetas_Usuarios(id_usuario, id_camiseta);
-               // modelo.insertarCamisetas_Imagenes1(id_camiseta);//duda
+              
 
                 MessageBox.Show("Camiseta insertada");
 

@@ -118,6 +118,7 @@
     <Compile Include="BD\ConexionBD.cs" />
     <Compile Include="Registro_Login\Controlador.cs" />
     <Compile Include="BD\Modelo.cs" />
+    <Compile Include="Singleton\RepositorioAplicacion.cs" />
     <Page Include="AdministradorCamisetas.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

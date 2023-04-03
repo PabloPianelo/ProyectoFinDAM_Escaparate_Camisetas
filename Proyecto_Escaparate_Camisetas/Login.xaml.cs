@@ -25,10 +25,11 @@ namespace Proyecto_Escaparate_Camisetas {
 
         private void Button_Click_1(object sender, RoutedEventArgs e) {
 
-          
            String nombres = nombre.Text;
 
-            String pas = pass.Password;
+           
+          String pas = pass.Password;
+
             
             try {
                
@@ -41,13 +42,13 @@ namespace Proyecto_Escaparate_Camisetas {
                     MessageBox.Show(respuesta);
                 } else if (modelo.adminorUsuario(nombres).Equals("1")) {
 
-                  
-                    InicioAdmin admin = new InicioAdmin(nombres);
+                    Singleton.RepositorioAplicacion.Instance.Nombre = nombres;
+                    InicioAdmin admin = new InicioAdmin();
                     admin.Show();
                     this.Close();
                 } else {
-                   
-                    InicioUsuario usuario = new InicioUsuario(nombres);
+                    Singleton.RepositorioAplicacion.Instance.Nombre = nombres;
+                    InicioUsuario usuario = new InicioUsuario();
                     usuario.Show();
                     this.Close();
                 }

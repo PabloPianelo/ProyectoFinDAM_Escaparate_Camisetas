@@ -13,11 +13,7 @@ namespace Proyecto_Escaparate_Camisetas {
 
             InitializeComponent();
         }
-        public InicioAdmin(String dato) {
-
-            InitializeComponent();
-            this.dato = dato;
-        }
+       
         private void Button_Click(object sender, RoutedEventArgs e) {
             
             AdministradorUsuarios admin = new AdministradorUsuarios();
@@ -26,13 +22,13 @@ namespace Proyecto_Escaparate_Camisetas {
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e) {
-            AdministradorCamisetas administrador = new AdministradorCamisetas(dato);
+            AdministradorCamisetas administrador = new AdministradorCamisetas();
             administrador.Show();
             this.Close();
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e) {
-            AdministradorImagen imagen = new AdministradorImagen(dato);
+            AdministradorImagen imagen = new AdministradorImagen();
             imagen.Show();
             this.Close();
         }

@@ -12,13 +12,10 @@ namespace Proyecto_Escaparate_Camisetas {
             InitializeComponent();
         }
 
-        public InicioUsuario(string dato) {
-            InitializeComponent();
-            this.dato = dato;
-        }
+     
 
         private void Button_Click(object sender, RoutedEventArgs e) {
-            AdministradorImagen imagen = new AdministradorImagen(dato);
+            AdministradorImagen imagen = new AdministradorImagen();
             imagen.Show();
             this.Close();
         }

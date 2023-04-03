@@ -14,13 +14,9 @@ namespace Proyecto_Escaparate_Camisetas {
         public AdministradorImagen() {
             InitializeComponent();
         }
-        String dato;
+      
 
-        public AdministradorImagen(String dato) {
-
-            InitializeComponent();
-            this.dato = dato;
-        }
+     
 
 
         private void Button_Click(object sender, RoutedEventArgs e) {
@@ -67,16 +63,12 @@ namespace Proyecto_Escaparate_Camisetas {
 
 
 
-
-
-
-
-            if (modelo.existeUsuario(dato)) {
-                long id_usuario = modelo.idUsuario(dato);
+            if (modelo.existeUsuario(Singleton.RepositorioAplicacion.Instance.Nombre)) {
+                long id_usuario = modelo.idUsuario(Singleton.RepositorioAplicacion.Instance.Nombre);
                 imagen.IdUsuario = id_usuario;
                 long id_imagen = modelo.insertarImagen(imagen);
 
-               // modelo.insertarCamisetas_Imagenes();//duda
+             
 
                 MessageBox.Show("Imagen insertada");
 
