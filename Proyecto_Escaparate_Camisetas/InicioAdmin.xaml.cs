@@ -1,5 +1,4 @@
-﻿using System;
-using System.Windows;
+﻿using System.Windows;
 
 namespace Proyecto_Escaparate_Camisetas {
     /// <summary>
@@ -8,14 +7,14 @@ namespace Proyecto_Escaparate_Camisetas {
     public partial class InicioAdmin : Window {
 
 
-        String dato;
+
         public InicioAdmin() {
 
             InitializeComponent();
         }
-       
+
         private void Button_Click(object sender, RoutedEventArgs e) {
-            
+
             AdministradorUsuarios admin = new AdministradorUsuarios();
             admin.Show();
             this.Close();

@@ -8,14 +8,14 @@ namespace Proyecto_Escaparate_Camisetas.Clases {
         System.Windows.Media.Imaging.BitmapImage ImageData;
         byte[] img;
 
-        public Camiseta(String nombre, System.Windows.Media.Imaging.BitmapImage ImageData) {
+        public Camiseta(System.Windows.Media.Imaging.BitmapImage ImageData) {
 
-            this.nombre = nombre;
+
             this.ImageData = ImageData;
         }
         public Camiseta() {
 
-           
+
         }
 
 
@@ -24,6 +24,9 @@ namespace Proyecto_Escaparate_Camisetas.Clases {
         public string ColorCamiseta { get => colorCamiseta; set => colorCamiseta = value; }
         public byte[] Img { get => img; set => img = value; }
         public string Nombre1 { get => nombre; set => nombre = value; }
+
+
+
         public BitmapImage ImageData1 { get => ImageData; set => ImageData = value; }
     }
 }

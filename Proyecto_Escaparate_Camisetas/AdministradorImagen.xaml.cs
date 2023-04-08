@@ -1,5 +1,6 @@
 ﻿using Microsoft.Win32;
 using System;
+using System.IO;
 using System.Windows;
 using System.Windows.Media.Imaging;
 
@@ -14,9 +15,9 @@ namespace Proyecto_Escaparate_Camisetas {
         public AdministradorImagen() {
             InitializeComponent();
         }
-      
 
-     
+
+
 
 
         private void Button_Click(object sender, RoutedEventArgs e) {
@@ -29,14 +30,26 @@ namespace Proyecto_Escaparate_Camisetas {
                 img.Source = new BitmapImage(uri);
                 System.Drawing.Image newImage = System.Drawing.Image.FromFile(openFileDialog.FileName);
                 converterDemo(newImage);
-
+                imagen.Img_Imagen= toByte((BitmapSource)img.Source);
 
 
 
 
             }
         }
+        public byte[] toByte(BitmapSource img) {
 
+            byte[] data;
+            JpegBitmapEncoder encoder = new JpegBitmapEncoder();
+            encoder.Frames.Add(BitmapFrame.Create(img));
+            using (MemoryStream ms = new MemoryStream()) {
+                encoder.Save(ms);
+                data = ms.ToArray();
+
+            }
+
+            return data;
+        }
         public static byte[] converterDemo(System.Drawing.Image x) {
             System.Drawing.ImageConverter _imageConverter = new System.Drawing.ImageConverter();
             byte[] xByte = (byte[])_imageConverter.ConvertTo(x, typeof(byte[]));
@@ -68,7 +81,7 @@ namespace Proyecto_Escaparate_Camisetas {
                 imagen.IdUsuario = id_usuario;
                 long id_imagen = modelo.insertarImagen(imagen);
 
-             
+
 
                 MessageBox.Show("Imagen insertada");
 
@@ -77,7 +90,7 @@ namespace Proyecto_Escaparate_Camisetas {
 
             }
 
-           
+
 
 
 

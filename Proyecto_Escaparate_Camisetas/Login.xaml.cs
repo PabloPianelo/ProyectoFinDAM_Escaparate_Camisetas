@@ -13,8 +13,8 @@ namespace Proyecto_Escaparate_Camisetas {
 
 
         }
-       
-      
+
+
 
 
         private void Button_Click(object sender, RoutedEventArgs e) {
@@ -25,14 +25,15 @@ namespace Proyecto_Escaparate_Camisetas {
 
         private void Button_Click_1(object sender, RoutedEventArgs e) {
 
-           String nombres = nombre.Text;
+            String nombres = nombre.Text;
 
-           
-          String pas = pass.Password;
 
-            
+
+            String pas = pass.Password;
+
+
             try {
-               
+
 
                 Registro_Login.Controlador controlador = new Registro_Login.Controlador();
                 BD.Modelo modelo = new BD.Modelo();

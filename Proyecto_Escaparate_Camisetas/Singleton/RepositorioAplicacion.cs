@@ -1,12 +1,8 @@
 ﻿using Proyecto_Escaparate_Camisetas.Clases;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Proyecto_Escaparate_Camisetas.Singleton {
-  public sealed class RepositorioAplicacion {
+    public sealed class RepositorioAplicacion {
         private readonly static RepositorioAplicacion _instance = new RepositorioAplicacion();
         private Clases.Usuarios usuario_login;
         private String nombre;
@@ -27,7 +23,7 @@ namespace Proyecto_Escaparate_Camisetas.Singleton {
         internal Usuarios Usuario_login { get => usuario_login; set => usuario_login = value; }
     }
 
-   
-        
-    
+
+
+
 }

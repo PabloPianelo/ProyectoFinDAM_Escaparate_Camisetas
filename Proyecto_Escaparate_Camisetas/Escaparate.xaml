@@ -7,24 +7,64 @@
         mc:Ignorable="d"
         Title="Escaparate" Height="450" Width="800">
 
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="148"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
 
-    <ListView  x:Name="LvCamisetas" Height="450" Width="800" HorizontalAlignment="Stretch" VerticalAlignment="Top">
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="310"></RowDefinition>
+            <RowDefinition Height="109"></RowDefinition>
+
+        </Grid.RowDefinitions>
+
+
+        <ListView  Grid.Column="0" x:Name="LvImagenes" Height="310" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="0,0,3,0">
             <ItemsControl.ItemsPanel>
                 <ItemsPanelTemplate>
-                    <UniformGrid Columns="5" HorizontalAlignment="Stretch"/>
+                    <UniformGrid Columns="5"   HorizontalAlignment="Stretch"/>
                 </ItemsPanelTemplate>
             </ItemsControl.ItemsPanel>
-            <ListView.ItemTemplate>
+            <ListView.ItemTemplate >
                 <DataTemplate>
                     <StackPanel Orientation="Vertical" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
-                        <Image Source="{Binding ImageData1}" Width="200" Height="200" HorizontalAlignment="Stretch" VerticalAlignment="Top" Stretch="UniformToFill" />
-                    <TextBlock Text="{Binding Nombre}" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" />
+                        <Button  Click="Button_Click">
+                            <Image  Source="{Binding ImageData1}" Width="75"  Stretch="UniformToFill"  />
+                        </Button>
                     </StackPanel>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
 
 
-    
+        <ListView  Grid.Row="1" Grid.Column="1" x:Name="LvCamisetas" Height="110" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="0,0,3,-1"  >
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <UniformGrid Columns="5" HorizontalAlignment="Stretch"/>
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+            <ListView.ItemTemplate >
+                <DataTemplate>
+                    <StackPanel Orientation="Vertical" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                        <Button  Click="Button_Click">
+                            <Image   Source="{Binding ImageData1}" Width="75"  />
+                        </Button>
 
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+
+        <Image Name="Camiseta" Grid.Column="1" HorizontalAlignment="Left" Height="290" Margin="89,20,0,0" VerticalAlignment="Top" Width="393"/>
+        <Image Name="Img" Grid.Column="1" HorizontalAlignment="Left" Height="139" Margin="200,95,0,0" VerticalAlignment="Top" Width="168"/>
+
+
+
+
+
+
+    </Grid>
 </Window>
