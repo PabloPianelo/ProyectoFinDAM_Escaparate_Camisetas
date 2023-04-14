@@ -20,10 +20,10 @@ namespace Proyecto_Escaparate_Camisetas.Clases {
 
 
 
-        public string Nombre { get => Nombre1; set => Nombre1 = value; }
+       
         public string ColorCamiseta { get => colorCamiseta; set => colorCamiseta = value; }
         public byte[] Img { get => img; set => img = value; }
-        public string Nombre1 { get => nombre; set => nombre = value; }
+        public string Nombre { get => nombre; set => nombre = value; }
 
 
 

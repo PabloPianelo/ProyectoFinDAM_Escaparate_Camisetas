@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections;
+using System.IO;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Media;
 using System.Windows.Media.Imaging;
 
 namespace Proyecto_Escaparate_Camisetas {
@@ -26,7 +28,7 @@ namespace Proyecto_Escaparate_Camisetas {
 
             //img
                ArrayList arrayList_img = new BD.Modelo().img_Imagen(1);
-
+            Console.WriteLine("DATO "+arrayList_img.Count);
                for (int i = 0; i < arrayList_img.Count; i++) {
                    ((Clases.Imagen)arrayList_img[i]).ImageData1 = ToImage(((Clases.Imagen)arrayList_img[i]).Img_Imagen);
 
@@ -39,9 +41,9 @@ namespace Proyecto_Escaparate_Camisetas {
                ArrayList arrayList_img_2 = new BD.Modelo().img_Imagen(modelo.idUsuario(Singleton.RepositorioAplicacion.Instance.Nombre));
                for (int i = 0; i < arrayList_img_2.Count; i++) {
                    ((Clases.Imagen)arrayList_img_2[i]).ImageData1 = ToImage(((Clases.Imagen)arrayList_img_2[i]).Img_Imagen);
-
-               }
-            arrayList_img.Add(arrayList_img_2);
+                arrayList_img.Add(arrayList_img_2[i]);
+            }
+            
             this.LvImagenes.ItemsSource = arrayList_img;
 
 
@@ -66,11 +68,76 @@ namespace Proyecto_Escaparate_Camisetas {
         }
     }
 
-        private void Button_Click(object sender, RoutedEventArgs e) {
 
-            ListBoxItem listBoxItem = (ListBoxItem)LvCamisetas.SelectedItem;
-            BitmapImage image = (BitmapImage)listBoxItem.Content;
-            Img.Source = image;
+        BD.Modelo modelo = new BD.Modelo();
+        Clases.Imagen imagenSelecionada= new Clases.Imagen();
+        Clases.Camiseta camisetaSelecionada = new Clases.Camiseta();
+        private void LvCamisetas_SelectionChanged(object sender, SelectionChangedEventArgs e) {
+
+           // imagenSelecionada = new Clases.Imagen();
+
+            camisetaSelecionada = (Clases.Camiseta)LvCamisetas.SelectedItem;
+
+            camisetaSelecionada= modelo.porImg_Camiseta(camisetaSelecionada.Img);
+
+           
+
+
+        
+                if (imagenSelecionada.ColorCamiseta != camisetaSelecionada.ColorCamiseta) {
+                    Camiseta.Source = ((Clases.Camiseta)LvCamisetas.SelectedItem).ImageData1;
+                } else {
+                MessageBox.Show("La imagen o la camiseta no son compatibles");
+            }
+           
+           
+           
+
+        }
+
+        private void LvImagenes_SelectionChanged(object sender, SelectionChangedEventArgs e) {
+
+            imagenSelecionada = (Clases.Imagen)LvImagenes.SelectedItem;
+            imagenSelecionada = modelo.porImg_Imagen(imagenSelecionada.Img_Imagen);
+
+            
+                if (imagenSelecionada.ColorCamiseta != camisetaSelecionada.ColorCamiseta) {
+                    Img.Source = ((Clases.Imagen)LvImagenes.SelectedItem).ImageData1;
+                } else {
+                MessageBox.Show("La imagen o la camiseta no son compatibles");
+
+            }
+
+
+           
+
+        }
+
+
+        public byte[] toByte(BitmapSource img) {
+
+            byte[] data;
+            JpegBitmapEncoder encoder = new JpegBitmapEncoder();
+            encoder.Frames.Add(BitmapFrame.Create(img));
+            using (MemoryStream ms = new MemoryStream()) {
+                encoder.Save(ms);
+                data = ms.ToArray();
+
+            }
+
+            return data;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e) {
+            if (camisetaSelecionada != null && imagenSelecionada != null) {
+
+                Singleton.RepositorioAplicacion.Instance.Texto = "El usuario " + Singleton.RepositorioAplicacion.Instance.Nombre+" a pedido la camiseta "+camisetaSelecionada.Nombre+" con la imagen "+imagenSelecionada.Nombre;
+
+                MessageBox.Show(Singleton.RepositorioAplicacion.Instance.Texto);
+
+            } else {
+                MessageBox.Show("La imagen o la camiseta no esta selecionada");
+            }
         }
     }
 }

@@ -9,6 +9,14 @@ namespace Proyecto_Escaparate_Camisetas.Clases {
         long idUsuario;
         System.Windows.Media.Imaging.BitmapImage ImageData;
 
+        public Imagen(){
+            }
+
+        public Imagen(System.Windows.Media.Imaging.BitmapImage ImageData) {
+            this.ImageData1 = ImageData;
+        }
+
+
         public string Nombre { get => nombre; set => nombre = value; }
         public string ColorCamiseta { get => colorCamiseta; set => colorCamiseta = value; }
         public byte[] Img_Imagen { get => img_Imagen; set => img_Imagen = value; }

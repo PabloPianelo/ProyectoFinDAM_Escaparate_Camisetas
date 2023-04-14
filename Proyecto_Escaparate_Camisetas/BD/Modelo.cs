@@ -128,7 +128,7 @@ namespace Proyecto_Escaparate_Camisetas.BD {
 
 
             MySqlCommand command = new MySqlCommand(sql, conexion);
-        
+
             command.Parameters.AddWithValue("@Nombre", camiseta.Nombre);
             command.Parameters.AddWithValue("@colorCamiseta", camiseta.ColorCamiseta);
             command.Parameters.AddWithValue("@img_Camiseta", camiseta.Img);
@@ -201,15 +201,15 @@ namespace Proyecto_Escaparate_Camisetas.BD {
             MySqlDataReader reader = null;
             MySqlConnection conexion = class1.conexion();
             ArrayList array = new ArrayList();
-            
+
             String sql = "SELECT img_Camiseta  FROM camiseta";
             MySqlCommand command = new MySqlCommand(sql, conexion);
             reader = command.ExecuteReader();
             while (reader.Read()) {
                 Clases.Camiseta camiseta = new Clases.Camiseta();
-                camiseta.Img = (byte[]) reader["img_Camiseta"]; 
+                camiseta.Img = (byte[])reader["img_Camiseta"];
                 array.Add(camiseta);
-              
+
             }
 
             class1.cerrarConexion();
@@ -218,7 +218,7 @@ namespace Proyecto_Escaparate_Camisetas.BD {
 
         }
 
-  
+
         public ArrayList img_Imagen(int idUsuario) {
             BD.ConexionBD class1 = new BD.ConexionBD();
             MySqlDataReader reader = null;
@@ -229,7 +229,7 @@ namespace Proyecto_Escaparate_Camisetas.BD {
             reader = command.ExecuteReader();
             while (reader.Read()) {
                 Clases.Imagen imagen = new Clases.Imagen();
-                imagen.Img_Imagen = (byte[]) reader["img_Imagen"];
+                imagen.Img_Imagen = (byte[])reader["img_Imagen"];
                 array.Add(imagen);
             }
 
@@ -242,11 +242,69 @@ namespace Proyecto_Escaparate_Camisetas.BD {
 
 
 
+        
+        public Clases.Camiseta porImg_Camiseta(Byte[] imagen_camiseta) {
+            BD.ConexionBD class1 = new BD.ConexionBD();
+            MySqlDataReader reader = null;
+            MySqlConnection conexion = class1.conexion();
+
+            String sql = "SELECT  colorCamiseta,nombre  FROM camiseta where img_Camiseta=@imagen_camiseta";
+
+            MySqlCommand command = new MySqlCommand(sql, conexion);
+            command.Parameters.AddWithValue("@imagen_camiseta", imagen_camiseta);
+
+            reader = command.ExecuteReader();
+
+            Clases.Camiseta usr = null;
 
 
+            while (reader.Read()) {
+                usr = new Clases.Camiseta();
+                usr.ColorCamiseta = reader["colorCamiseta"].ToString();
+                usr.Nombre = reader["nombre"].ToString();
+
+
+            }
+            class1.cerrarConexion();
+            return usr;
+
+        }
+
+
+
+
+        public Clases.Imagen porImg_Imagen(Byte[] imagen_imagen) {
+            BD.ConexionBD class1 = new BD.ConexionBD();
+            MySqlDataReader reader = null;
+            MySqlConnection conexion = class1.conexion();
+
+            String sql = "SELECT  colorCamiseta,nombre  FROM imagen where img_Imagen= @imagen_imagen";
+
+            MySqlCommand command = new MySqlCommand(sql, conexion);
+            command.Parameters.AddWithValue("@imagen_imagen", imagen_imagen);
+
+            reader = command.ExecuteReader();
+
+            Clases.Imagen usr = null;
+
+
+            while (reader.Read()) {
+                usr = new Clases.Imagen();
+                usr.ColorCamiseta = reader["colorCamiseta"].ToString();
+                usr.Nombre = reader["nombre"].ToString();
+
+
+            }
+            class1.cerrarConexion();
+            return usr;
+
+        }
 
 
 
 
     }
-}
+
+
+
+ }

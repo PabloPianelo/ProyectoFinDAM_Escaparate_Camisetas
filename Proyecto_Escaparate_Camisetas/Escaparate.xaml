@@ -21,25 +21,26 @@
         </Grid.RowDefinitions>
 
 
-        <ListView  Grid.Column="0" x:Name="LvImagenes" Height="310" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="0,0,3,0">
+        <ListView  Grid.Column="0" x:Name="LvImagenes"  Height="310" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="0,0,3,0"  SelectionChanged="LvImagenes_SelectionChanged">
             <ItemsControl.ItemsPanel>
                 <ItemsPanelTemplate>
-                    <UniformGrid Columns="5"   HorizontalAlignment="Stretch"/>
+                    <WrapPanel Orientation="Vertical"  HorizontalAlignment="Center"/>
                 </ItemsPanelTemplate>
             </ItemsControl.ItemsPanel>
             <ListView.ItemTemplate >
                 <DataTemplate>
-                    <StackPanel Orientation="Vertical" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
-                        <Button  Click="Button_Click">
-                            <Image  Source="{Binding ImageData1}" Width="75"  Stretch="UniformToFill"  />
-                        </Button>
+                    <StackPanel  VerticalAlignment="Stretch" HorizontalAlignment="Stretch" >
+                     
+                            <Image  Source="{Binding ImageData1}" Width="75"  Stretch="UniformToFill"   />
+                        
                     </StackPanel>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
 
 
-        <ListView  Grid.Row="1" Grid.Column="1" x:Name="LvCamisetas" Height="110" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="0,0,3,-1"  >
+
+        <ListView  Grid.Row="1" Grid.Column="1" x:Name="LvCamisetas" Height="110" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="0,0,3,-1"  SelectionChanged="LvCamisetas_SelectionChanged" >
             <ItemsControl.ItemsPanel>
                 <ItemsPanelTemplate>
                     <UniformGrid Columns="5" HorizontalAlignment="Stretch"/>
@@ -48,9 +49,9 @@
             <ListView.ItemTemplate >
                 <DataTemplate>
                     <StackPanel Orientation="Vertical" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
-                        <Button  Click="Button_Click">
+                       
                             <Image   Source="{Binding ImageData1}" Width="75"  />
-                        </Button>
+                        
 
                     </StackPanel>
                 </DataTemplate>
@@ -58,8 +59,9 @@
         </ListView>
 
 
-        <Image Name="Camiseta" Grid.Column="1" HorizontalAlignment="Left" Height="290" Margin="89,20,0,0" VerticalAlignment="Top" Width="393"/>
+        <Image Name="Camiseta" Grid.Column="1" HorizontalAlignment="Left" Height="290" Margin="114,15,0,0" VerticalAlignment="Top" Width="393"/>
         <Image Name="Img" Grid.Column="1" HorizontalAlignment="Left" Height="139" Margin="200,95,0,0" VerticalAlignment="Top" Width="168"/>
+        <Button Content="Comprar" Grid.Column="1" HorizontalAlignment="Left" Margin="567,10,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
 
 
 
