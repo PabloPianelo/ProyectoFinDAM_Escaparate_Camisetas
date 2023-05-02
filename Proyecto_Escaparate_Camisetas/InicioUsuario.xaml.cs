@@ -24,5 +24,12 @@ namespace Proyecto_Escaparate_Camisetas {
             escaparate.Show();
             this.Close();
         }
+        private void btn5_Click(object sender, RoutedEventArgs e)
+        {
+
+            Login login = new Login();
+            login.Show();
+            this.Close();
+        }
     }
 }

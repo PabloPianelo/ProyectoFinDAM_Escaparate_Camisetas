@@ -28,6 +28,9 @@ namespace Proyecto_Escaparate_Camisetas {
                     MessageBox.Show(respuesta);
                 } else {
                     MessageBox.Show("Usuario reguistrado");
+                    Login login = new Login();
+                    login.Show();
+                    this.Close();
                 }
 
             } catch (Exception ex) {
@@ -35,6 +38,14 @@ namespace Proyecto_Escaparate_Camisetas {
             }
 
 
+        }
+
+        private void btn5_Click(object sender, RoutedEventArgs e)
+        {
+          
+            Login login = new Login();
+            login.Show();
+            this.Close();
         }
     }
 }

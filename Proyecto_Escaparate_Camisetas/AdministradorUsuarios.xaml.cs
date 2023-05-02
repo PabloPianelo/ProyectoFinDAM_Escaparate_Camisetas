@@ -12,7 +12,10 @@ namespace Proyecto_Escaparate_Camisetas {
             InitializeComponent();
 
             BD.ConexionBD conexionBD = new BD.ConexionBD();
+            BD.Modelo modelo = new BD.Modelo();
 
+
+            pedidos.Text += "El usuario " + modelo.nombreUsuario(modelo.mensajeIdUsuario()) + " a pedido la camiseta " + modelo.nombreCamiseta(modelo.mensajeIdCamiseta()) + " con la imagen " + modelo.nombreImagen(modelo.mensajeIdImagen())+"\n"; 
 
 
             MySqlConnection conexion = conexionBD.conexion();

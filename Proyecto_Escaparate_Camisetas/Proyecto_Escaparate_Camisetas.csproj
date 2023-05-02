@@ -186,6 +186,13 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Imagenes\contraseña.png" />
+    <Resource Include="Imagenes\logo.jpg" />
+    <Resource Include="Imagenes\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagenes\flecha1.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

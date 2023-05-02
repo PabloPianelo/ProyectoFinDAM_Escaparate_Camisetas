@@ -74,7 +74,7 @@ namespace Proyecto_Escaparate_Camisetas {
         Clases.Camiseta camisetaSelecionada = new Clases.Camiseta();
         private void LvCamisetas_SelectionChanged(object sender, SelectionChangedEventArgs e) {
 
-           // imagenSelecionada = new Clases.Imagen();
+          
 
             camisetaSelecionada = (Clases.Camiseta)LvCamisetas.SelectedItem;
 
@@ -131,9 +131,19 @@ namespace Proyecto_Escaparate_Camisetas {
         private void Button_Click(object sender, RoutedEventArgs e) {
             if (camisetaSelecionada != null && imagenSelecionada != null) {
 
-                Singleton.RepositorioAplicacion.Instance.Texto = "El usuario " + Singleton.RepositorioAplicacion.Instance.Nombre+" a pedido la camiseta "+camisetaSelecionada.Nombre+" con la imagen "+imagenSelecionada.Nombre;
 
-                MessageBox.Show(Singleton.RepositorioAplicacion.Instance.Texto);
+
+                BD.Modelo modelo = new BD.Modelo();
+                long idimagen = modelo.idImagen(imagenSelecionada.Nombre);
+                long idcamiseta = modelo.idCamiseta(camisetaSelecionada.Nombre);
+                long idusuario = modelo.idUsuario(Singleton.RepositorioAplicacion.Instance.Nombre);
+
+                modelo.insertarCamisetas_Imagenes_Usuario(idimagen, idcamiseta, idusuario);
+
+
+               // Singleton.RepositorioAplicacion.Instance.Texto = "El usuario " + Singleton.RepositorioAplicacion.Instance.Nombre+" a pedido la camiseta "+camisetaSelecionada.Nombre+" con la imagen "+imagenSelecionada.Nombre;
+               //insertar en bd  con los id de cada uno 
+                MessageBox.Show("Información enviada");
 
             } else {
                 MessageBox.Show("La imagen o la camiseta no esta selecionada");

@@ -17,7 +17,7 @@ namespace Proyecto_Escaparate_Camisetas {
 
 
 
-        private void Button_Click(object sender, RoutedEventArgs e) {
+       private void Button_Click(object sender, RoutedEventArgs e) {
             Registro registro = new Registro();
             registro.Show();
             this.Close();

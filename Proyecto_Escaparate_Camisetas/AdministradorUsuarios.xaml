@@ -7,7 +7,9 @@
         mc:Ignorable="d"
         Title="AdministradorUsuarios" Height="450" Width="800">
     <Grid>
-        <DataGrid Name="dataGrib" HorizontalAlignment="Left" Height="326" Margin="51,44,0,0" VerticalAlignment="Top" Width="638" AutoGenerateColumns="True"/>
+        <DataGrid Name="dataGrib" HorizontalAlignment="Left" Height="326" Margin="55,10,0,0" VerticalAlignment="Top" Width="638" AutoGenerateColumns="True"/>
+        <TextBlock Name="pedidos" HorizontalAlignment="Left" Margin="70,362,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="47" Width="625"/>
+        <Label Content="Pedidos" HorizontalAlignment="Left" Margin="65,341,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>
