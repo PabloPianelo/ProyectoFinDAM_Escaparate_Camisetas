@@ -149,5 +149,12 @@ namespace Proyecto_Escaparate_Camisetas {
                 MessageBox.Show("La imagen o la camiseta no esta selecionada");
             }
         }
+
+        private void btn5_Click(object sender, RoutedEventArgs e) {
+
+            InicioUsuario usuario = new  InicioUsuario();
+            usuario.Show();
+            this.Close();
+        }
     }
 }

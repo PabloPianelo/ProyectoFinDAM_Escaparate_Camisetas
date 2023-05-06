@@ -45,7 +45,12 @@ namespace Proyecto_Escaparate_Camisetas {
         }
 
 
+        private void btn5_Click(object sender, RoutedEventArgs e) {
 
+            InicioAdmin admin = new InicioAdmin();
+            admin.Show();
+            this.Close();
+        }
         public byte[] toByte(BitmapSource img) {
 
             byte[] data;

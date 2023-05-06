@@ -5,17 +5,131 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Proyecto_Escaparate_Camisetas"
         mc:Ignorable="d"
-        Title="AdministradorCamisetas" Height="450" Width="800">
-    <Grid>
-        <Image  Name="img" HorizontalAlignment="Left" Height="227" Margin="491,53,0,0" VerticalAlignment="Top" Width="215"/>
-        <TextBox Name="nombre" HorizontalAlignment="Left" Height="22" Margin="186,148,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Color que no se le puede aplicar " HorizontalAlignment="Left" Margin="186,185,0,0" VerticalAlignment="Top"/>
-        <RadioButton x:Name="rbRojo" Content="Rojo" HorizontalAlignment="Left" Margin="186,226,0,0" VerticalAlignment="Top"/>
-        <RadioButton x:Name="rbAzul" Content="Azul" HorizontalAlignment="Left" Margin="186,246,0,0" VerticalAlignment="Top"/>
-        <RadioButton x:Name="rbNegro" Content="Negro" HorizontalAlignment="Left" Margin="186,268,0,0" VerticalAlignment="Top"/>
-        <RadioButton x:Name="rbBlanco" Content="Blanco" HorizontalAlignment="Left" Margin="186,288,0,0" VerticalAlignment="Top"/>
-        <Button Content="Selecionar imagen" HorizontalAlignment="Left" Margin="529,288,0,0" VerticalAlignment="Top" Width="136" Click="Button_Click"/>
-        <Button Content="Insertar Camiseta" HorizontalAlignment="Left" Margin="344,365,0,0" VerticalAlignment="Top" Width="128" Click="Button_Click_1"/>
+        Title="AdministradorCamisetas" Height="550" Width="800">
+    <Border CornerRadius="12">
+        <Border CornerRadius="10"                    
+            BorderThickness="2"
+            Opacity="0.95">
+            <Border.BorderBrush>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#462AD8" Offset="0"/>
+                    <GradientStop Color="#DA34AE" Offset="0.75"/>
+                    <GradientStop Color="#8A16C1" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.BorderBrush>
+            <Border.Background>
+                <LinearGradientBrush StartPoint="0,1" EndPoint="1,0">
+                    <GradientStop Color="#060531" Offset="0"/>
+                    <GradientStop Color="#1B1448" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.Background>
+            <Grid>
+                <Button Name="btn5" Click="btn5_Click" RenderTransformOrigin="0,0.627" Margin="10,0,689,454" Grid.RowSpan="2">
+                    <Image Source="Imagenes/flecha1.jpg"></Image>
+                </Button>
+                <TextBlock
+                               Foreground="White"
+                               FontSize="25"
+                               FontWeight="Medium"
+                               FontFamily="Montserrat"
+                               HorizontalAlignment="Center" Margin="198,13,195,444" Width="395"><Run Text="ADMINISTRADOR DE "/><Run Text="CAMISETAS"/></TextBlock>
 
-    </Grid>
+                <Image  Name="img" HorizontalAlignment="Left" Height="270" Margin="491,53,0,0" VerticalAlignment="Top" Width="232"/>
+                <TextBox x:Name="nombre"
+                             FontSize="13"
+                             FontWeight="Medium"
+                             FontFamily="Montserrat"                            
+                             Foreground="White"
+                             CaretBrush="LightGray"
+                             BorderBrush="DarkGray"
+                             BorderThickness="0,0,0,2"
+                             VerticalContentAlignment="Center"
+                             Margin="102,173,445,305"
+                             Padding="20,0,0,0">
+                    <TextBox.Background>
+                        <SolidColorBrush></SolidColorBrush>
+                    </TextBox.Background>
+                </TextBox>
+                <TextBlock
+                               Foreground="White"
+                               FontSize="20"
+                            Margin="103,141,460,347" 
+                               FontWeight="Medium"
+                               FontFamily="Montserrat"
+                               HorizontalAlignment="Center" Width="225"><Run Text=" "/><Run Text="Nombre"/><Run Text=" de la "/><Run Text=" camiseta"/></TextBlock>
+                <TextBlock
+                               Foreground="White"
+                               FontSize="20"
+                            Margin="103,213,383,273" 
+                               FontWeight="Medium"
+                               FontFamily="Montserrat"
+                               HorizontalAlignment="Center" Width="302"><Run Text=" "/><Run Text="Color que no se le puede aplicar "/></TextBlock>
+                <RadioButton x:Name="rbRojo"  Content="Rojo" HorizontalAlignment="Left" Margin="125,255,0,0" VerticalAlignment="Top" Foreground="White" Background="Red" Height="27" Width="61"/>
+                <RadioButton x:Name="rbAzul" Content="Azul" HorizontalAlignment="Left" Margin="125,290,0,0" VerticalAlignment="Top" Foreground="White" Background="Blue" Height="28" Width="59"/>
+                <RadioButton x:Name="rbNegro" Content="Negro" HorizontalAlignment="Left" Margin="125,330,0,0" VerticalAlignment="Top" Foreground="White" Background="Black" Height="27" Width="75"/>
+                <RadioButton x:Name="rbBlanco" Content="Blanco" HorizontalAlignment="Left" Margin="125,366,0,0" VerticalAlignment="Top" Foreground="White" Height="27" Width="76"/>
+                <Button   BorderThickness="0"
+                            Content="Selecionar imagen"
+                            Foreground="White"
+                            FontSize="12"
+                            FontFamily="Montserrat"
+                            Cursor="Hand"                           
+                            Margin="518,328,100,137"
+                            Click="Button_Click">
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="Background" Value="#462AD8"/>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#28AEED"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Width="150" Height="40"
+                                        CornerRadius="20"
+                                        Background="{TemplateBinding Background}">
+                                <ContentPresenter VerticalAlignment="Center"
+                                                      HorizontalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <Button   BorderThickness="0"
+                    Content="Insertar Camiseta"
+                    Foreground="White"
+                    FontSize="12"
+                    FontFamily="Montserrat"
+                    Cursor="Hand"                           
+                    Margin="273,418,345,47"
+                    Click="Button_Click_1">
+                    <Button.Style>
+                        <Style TargetType="{x:Type Button}">
+                            <Setter Property="Background" Value="#462AD8"/>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#28AEED"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+                    <Button.Template>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Border Width="150" Height="40"
+                                CornerRadius="20"
+                                Background="{TemplateBinding Background}">
+                                <ContentPresenter VerticalAlignment="Center"
+                                    HorizontalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+
+
+
+            </Grid>
+        </Border>
+    </Border>
 </Window>

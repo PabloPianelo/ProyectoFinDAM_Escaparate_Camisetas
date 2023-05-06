@@ -5,11 +5,38 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Proyecto_Escaparate_Camisetas"
         mc:Ignorable="d"
-        Title="AdministradorUsuarios" Height="450" Width="800">
-    <Grid>
-        <DataGrid Name="dataGrib" HorizontalAlignment="Left" Height="326" Margin="55,10,0,0" VerticalAlignment="Top" Width="638" AutoGenerateColumns="True"/>
-        <TextBlock Name="pedidos" HorizontalAlignment="Left" Margin="70,362,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="47" Width="625"/>
-        <Label Content="Pedidos" HorizontalAlignment="Left" Margin="65,341,0,0" VerticalAlignment="Top"/>
+        Title="AdministradorUsuarios" Height="550" Width="800">
+    <Border CornerRadius="12">
+        <Border CornerRadius="10"                    
+            BorderThickness="2"
+            Opacity="0.95">
+            <Border.BorderBrush>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#462AD8" Offset="0"/>
+                    <GradientStop Color="#DA34AE" Offset="0.75"/>
+                    <GradientStop Color="#8A16C1" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.BorderBrush>
+            <Border.Background>
+                <LinearGradientBrush StartPoint="0,1" EndPoint="1,0">
+                    <GradientStop Color="#060531" Offset="0"/>
+                    <GradientStop Color="#1B1448" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.Background>
+            <Grid>
+                <Button Name="btn5" Click="btn5_Click" RenderTransformOrigin="0,0.627" Margin="10,0,689,454" Grid.RowSpan="2">
+                    <Image Source="Imagenes/flecha1.jpg"></Image>
+                </Button>
+                <TextBlock Text="Pedidos"
+                               Foreground="White"
+                               FontSize="25"
+                               FontWeight="Medium"
+                               FontFamily="Montserrat"
+                               HorizontalAlignment="Center" Margin="112,346,570,47" Width="106"/>
+                <DataGrid Name="dataGrib" HorizontalAlignment="Left" Height="326" Margin="105,12,0,0" VerticalAlignment="Top" Width="638" AutoGenerateColumns="True" Background="Transparent"    />
+                <TextBlock Name="pedidos" HorizontalAlignment="Left" Margin="108,378,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="47" Width="625" Foreground="White" />
 
-    </Grid>
+            </Grid>
+        </Border>
+    </Border>
 </Window>

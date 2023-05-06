@@ -14,9 +14,12 @@ namespace Proyecto_Escaparate_Camisetas {
             BD.ConexionBD conexionBD = new BD.ConexionBD();
             BD.Modelo modelo = new BD.Modelo();
 
+            if (modelo.nombreUsuario(modelo.mensajeIdUsuario())!= null)
+            {
+                pedidos.Text += "El usuario " + modelo.nombreUsuario(modelo.mensajeIdUsuario()) + " a pedido la camiseta " + modelo.nombreCamiseta(modelo.mensajeIdCamiseta()) + " con la imagen " + modelo.nombreImagen(modelo.mensajeIdImagen()) + "\n";
 
-            pedidos.Text += "El usuario " + modelo.nombreUsuario(modelo.mensajeIdUsuario()) + " a pedido la camiseta " + modelo.nombreCamiseta(modelo.mensajeIdCamiseta()) + " con la imagen " + modelo.nombreImagen(modelo.mensajeIdImagen())+"\n"; 
-
+            }
+         
 
             MySqlConnection conexion = conexionBD.conexion();
 
@@ -43,6 +46,13 @@ namespace Proyecto_Escaparate_Camisetas {
 
 
 
+        }
+
+        private void btn5_Click(object sender, RoutedEventArgs e) {
+
+            InicioAdmin admin = new InicioAdmin();
+            admin.Show();
+            this.Close();
         }
     }
 }

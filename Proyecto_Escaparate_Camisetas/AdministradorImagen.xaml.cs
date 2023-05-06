@@ -16,7 +16,19 @@ namespace Proyecto_Escaparate_Camisetas {
             InitializeComponent();
         }
 
+        private void btn5_Click(object sender, RoutedEventArgs e) {
 
+
+            if (Singleton.RepositorioAplicacion.Instance.Nombre == "admin") {
+                InicioAdmin admin = new InicioAdmin();
+                admin.Show();
+                this.Close();
+            } else { 
+            InicioUsuario usuario = new InicioUsuario();
+              usuario.Show();
+            this.Close();
+            }
+        }
 
 
 
