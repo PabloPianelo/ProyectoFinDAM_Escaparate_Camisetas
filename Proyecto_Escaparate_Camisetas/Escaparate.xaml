@@ -35,7 +35,7 @@
                     <RowDefinition Height="109"></RowDefinition>
 
                 </Grid.RowDefinitions>
-               
+
 
                 <ListView Background="Transparent" Grid.Column="0" x:Name="LvImagenes"  Height="411" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="0,0,3,0"  SelectionChanged="LvImagenes_SelectionChanged" Grid.RowSpan="2">
                     <ItemsControl.ItemsPanel>
@@ -77,11 +77,50 @@
 
                 <Image Name="Camiseta" Grid.Column="1" HorizontalAlignment="Left" Height="290" Margin="128,70,0,0" VerticalAlignment="Top" Width="393"/>
                 <Image Name="Img" Grid.Column="1" HorizontalAlignment="Left" Height="139" Margin="214,150,0,0" VerticalAlignment="Top" Width="168"/>
-                <Button Content="Comprar" Grid.Column="1" HorizontalAlignment="Left" Margin="545,19,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click" Height="20"/>
-
-                <Button Name="btn5" Click="btn5_Click" RenderTransformOrigin="0,0.627" Margin="13,3,485,322" Grid.Column="1">
-                    <Image Source="Imagenes/flecha1.jpg"></Image>
+                <Button  Content="Comprar" BorderThickness="0"
+                    Foreground="White"
+                    FontSize="12"
+                    FontFamily="Montserrat"
+                    Cursor="Hand"                           
+                   Grid.Column="1" HorizontalAlignment="Left" Margin="478,13,0,351"
+                   Click="Button_Click" Width="150">
+                    <Button.Style>
+                        <Style TargetType="{x:Type Button}">
+                            <Setter Property="Background" Value="#462AD8"/>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#28AEED"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+                    <Button.Template>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Border Width="150" Height="40"
+                                CornerRadius="20"
+                                Background="{TemplateBinding Background}">
+                                <ContentPresenter VerticalAlignment="Center"
+                                    HorizontalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
                 </Button>
+
+                <Button Name="btn5" Click="btn5_Click"  RenderTransformOrigin="0,0.627" Margin="3,3,545,342" Grid.Column="1" Background="Transparent" BorderBrush="Transparent">
+                    <Image Source="Imagenes/flecha-correcta.png" Height="59" Width="53" RenderTransformOrigin="0.5,0.5">
+                        <Image.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="-179.866"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Image.RenderTransform>
+                    </Image>
+                </Button>
+
+
+
 
 
 
