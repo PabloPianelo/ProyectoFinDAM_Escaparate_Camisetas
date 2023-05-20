@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Security.Cryptography;
+using System.Text;
 using System.Windows;
 
 namespace Proyecto_Escaparate_Camisetas {
@@ -14,10 +16,18 @@ namespace Proyecto_Escaparate_Camisetas {
 
         }
 
+        public static string GetSHA1(string str) {
+            SHA1 sha1 = SHA1Managed.Create();
+            ASCIIEncoding encoding = new ASCIIEncoding();
+            byte[] stream = null;
+            StringBuilder sb = new StringBuilder();
+            stream = sha1.ComputeHash(encoding.GetBytes(str));
+            for (int i = 0; i < stream.Length; i++) sb.AppendFormat("{0:x2}", stream[i]);
+            return sb.ToString();
+        }
 
 
-
-       private void Button_Click(object sender, RoutedEventArgs e) {
+        private void Button_Click(object sender, RoutedEventArgs e) {
             Registro registro = new Registro();
             registro.Show();
             this.Close();
@@ -37,7 +47,7 @@ namespace Proyecto_Escaparate_Camisetas {
 
                 Registro_Login.Controlador controlador = new Registro_Login.Controlador();
                 BD.Modelo modelo = new BD.Modelo();
-                String respuesta = controlador.ctrlLoging(nombres, pas);
+                String respuesta = controlador.ctrlLoging(nombres, GetSHA1(pas));
                 if (respuesta.Length > 0) {
 
                     MessageBox.Show(respuesta);

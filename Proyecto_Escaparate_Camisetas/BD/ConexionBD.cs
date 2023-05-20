@@ -10,7 +10,12 @@ namespace Proyecto_Escaparate_Camisetas.BD {
         static string usuario = "root";
         static string password = "";
 
-        string cadenaConexion = "Database=" + bd + "; Data Source=" + server + "; User Id=" + usuario + "; Password=" + password + "";
+
+
+        /* string cadenaConexion = "Server=proyectoescaparate.mysql.database.azure.com;UserID=Pablo;Password=Nexus@1234;" +
+             "Database=proyectocamisetas;SslMode=Required;SslCa=C:\\BaltimoreCyberTrustRoot.crt.pem;";*/
+         string cadenaConexion = "Database=" + bd + "; Data Source=" + server + "; User Id=" + usuario + "; Password=" + password + "";
+
 
 
         public MySqlConnection conexion() {
@@ -23,6 +28,7 @@ namespace Proyecto_Escaparate_Camisetas.BD {
 
 
             } catch (MySqlException e) {
+                
                 MessageBox.Show("Error en la base de datos " + e.ToString());
             }
 

@@ -141,8 +141,7 @@ namespace Proyecto_Escaparate_Camisetas {
                 modelo.insertarCamisetas_Imagenes_Usuario(idimagen, idcamiseta, idusuario);
 
 
-               // Singleton.RepositorioAplicacion.Instance.Texto = "El usuario " + Singleton.RepositorioAplicacion.Instance.Nombre+" a pedido la camiseta "+camisetaSelecionada.Nombre+" con la imagen "+imagenSelecionada.Nombre;
-               //insertar en bd  con los id de cada uno 
+               
                 MessageBox.Show("Información enviada");
 
             } else {
