@@ -3,6 +3,8 @@ using System.Windows;
 
 namespace Proyecto_Escaparate_Camisetas.BD {
     class ConexionBD {
+
+
         MySqlConnection conex = null;
 
         static string server = "localhost";
@@ -12,9 +14,10 @@ namespace Proyecto_Escaparate_Camisetas.BD {
 
 
 
-        /* string cadenaConexion = "Server=proyectoescaparate.mysql.database.azure.com;UserID=Pablo;Password=Nexus@1234;" +
-             "Database=proyectocamisetas;SslMode=Required;SslCa=C:\\BaltimoreCyberTrustRoot.crt.pem;";*/
-         string cadenaConexion = "Database=" + bd + "; Data Source=" + server + "; User Id=" + usuario + "; Password=" + password + "";
+         string cadenaConexion = "Server=proyectoescaparate.mysql.database.azure.com;UserID=Pablo;Password=Nexus@1234;" +
+             "Database=proyectocamiseta;SslMode=Required;SslCa=Conexión\\BaltimoreCyberTrustRoot.crt.pem;";
+        //cadena de conexion en local11
+        // string cadenaConexion = "Database=" + bd + "; Data Source=" + server + "; User Id=" + usuario + "; Password=" + password + "";
 
 
 

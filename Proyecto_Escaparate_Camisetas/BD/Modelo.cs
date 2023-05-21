@@ -50,7 +50,7 @@ namespace Proyecto_Escaparate_Camisetas.BD {
             MySqlDataReader reader = null;
             MySqlConnection conexion = class1.conexion();
 
-            String sql = "SELECT nombre,contraseña FROM usuario where nombre=" + "'" + usuario + "'";
+            String sql = "SELECT nombre,contrasena FROM usuario where nombre=" + "'" + usuario + "'";
 
             MySqlCommand command = new MySqlCommand(sql, conexion);
 
@@ -63,7 +63,8 @@ namespace Proyecto_Escaparate_Camisetas.BD {
             while (reader.Read()) {
                 usr = new Clases.Usuarios();
                 usr.Nombre = reader["nombre"].ToString();
-                usr.Contraseña = reader["contraseña"].ToString();
+                usr.Contraseña = reader["contrasen" +
+                    "a"].ToString();
 
             }
             class1.cerrarConexion();
