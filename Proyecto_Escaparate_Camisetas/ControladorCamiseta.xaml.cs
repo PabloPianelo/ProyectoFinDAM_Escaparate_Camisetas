@@ -1,30 +1,37 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
+using System.Collections.Generic;
 using System.Data;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Shapes;
 
-namespace Proyecto_Escaparate_Camisetas {
+namespace Proyecto_Escaparate_Camisetas
+{
     /// <summary>
-    /// Lógica de interacción para AdministradorUsuarios.xaml
+    /// Lógica de interacción para ControladorCamiseta.xaml
     /// </summary>
-    public partial class AdministradorUsuarios : Window {
-        public AdministradorUsuarios() {
+    public partial class ControladorCamiseta : Window
+    {
+        public ControladorCamiseta()
+        {
             InitializeComponent();
 
             BD.ConexionBD conexionBD = new BD.ConexionBD();
             BD.Modelo modelo = new BD.Modelo();
 
-            if (modelo.nombreUsuario(modelo.mensajeIdUsuario())!= null)
-            {
-                pedidos.Text += "El usuario " + modelo.nombreUsuario(modelo.mensajeIdUsuario()) + " a pedido la camiseta " + modelo.nombreCamiseta(modelo.mensajeIdCamiseta()) + " con la imagen " + modelo.nombreImagen(modelo.mensajeIdImagen()) + "\n";
-
-            }
-         
-
             MySqlConnection conexion = conexionBD.conexion();
 
 
-            String sql = "SELECT * FROM usuario";
+            String sql = "SELECT * FROM camiseta";
             MySqlCommand command = new MySqlCommand(sql, conexion);
 
 
@@ -36,19 +43,10 @@ namespace Proyecto_Escaparate_Camisetas {
             conexionBD.conexion();
 
 
-
-
-
-
-
-
-
-
-
-
         }
-      
-        private void btn5_Click(object sender, RoutedEventArgs e) {
+
+        private void btn5_Click(object sender, RoutedEventArgs e)
+        {
 
             InicioAdmin admin = new InicioAdmin();
             admin.Show();
@@ -59,18 +57,20 @@ namespace Proyecto_Escaparate_Camisetas {
         {
             String dato = nombre.Text;
             BD.Modelo modelo = new BD.Modelo();
+
             if (dato != null && modelo.existeUsuario(dato))
             {
-               
-                modelo.eliminarUsuarios(dato);
+                modelo.eliminarCamiseta(dato);
                 MessageBox.Show("Elemento Borrado");
                 nombre.Text = null;
+
             }
             else
             {
                 MessageBox.Show("Error vuelve a intentarlo!!!");
                 nombre.Text = null;
             }
+
         }
     }
 }

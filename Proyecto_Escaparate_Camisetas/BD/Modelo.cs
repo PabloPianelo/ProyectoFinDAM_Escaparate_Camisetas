@@ -12,7 +12,7 @@ namespace Proyecto_Escaparate_Camisetas.BD {
 
             MySqlConnection conexion = conexionBD.conexion();
 
-            String sql = "INSERT INTO usuario (nombre,contraseña,rol) VALUES (" + "'" + usuario.Nombre + "'," + "'" + usuario.Contraseña + "',false)";
+            String sql = "INSERT INTO usuario (nombre,contrasena,rol) VALUES (" + "'" + usuario.Nombre + "'," + "'" + usuario.Contraseña + "',false)";
 
             MySqlCommand command = new MySqlCommand(sql, conexion);
 
@@ -457,8 +457,47 @@ namespace Proyecto_Escaparate_Camisetas.BD {
 
         }
 
+        //eliminar  DELETE FROM `imagen` WHERE `nombre`=
 
 
+        public void eliminarImagen(String nombre){
+            BD.ConexionBD class1 = new BD.ConexionBD();
+            MySqlDataReader reader = null;
+            MySqlConnection conexion = class1.conexion();
+            String sql = "DELETE FROM imagen WHERE nombre=" + "'" + nombre + "'";
+            MySqlCommand command = new MySqlCommand(sql, conexion);
+            reader = command.ExecuteReader();
+            class1.cerrarConexion();
+
+
+        }
+
+        public void eliminarCamiseta(String nombre)
+        {
+            BD.ConexionBD class1 = new BD.ConexionBD();
+            MySqlDataReader reader = null;
+            MySqlConnection conexion = class1.conexion();
+            String sql = "DELETE FROM camiseta WHERE nombre=" + "'" + nombre + "'";
+            MySqlCommand command = new MySqlCommand(sql, conexion);
+            reader = command.ExecuteReader();
+            class1.cerrarConexion();
+
+
+        }
+
+
+        public void eliminarUsuarios(String nombre)
+        {
+            BD.ConexionBD class1 = new BD.ConexionBD();
+            MySqlDataReader reader = null;
+            MySqlConnection conexion = class1.conexion();
+            String sql = "DELETE FROM usuario WHERE nombre=" + "'" + nombre + "'";
+            MySqlCommand command = new MySqlCommand(sql, conexion);
+            reader = command.ExecuteReader();
+            class1.cerrarConexion();
+
+
+        }
 
 
     }
