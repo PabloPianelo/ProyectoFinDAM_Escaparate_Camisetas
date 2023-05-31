@@ -24,7 +24,7 @@
                 </LinearGradientBrush>
             </Border.Background>
             <Grid>
-                <Button Name="btn5" Click="btn5_Click" RenderTransformOrigin="0,0.627" Margin="10,0,689,454" Grid.RowSpan="2" Background="Transparent" BorderBrush="Transparent">
+                <Button Name="btn5" Click="btn5_Click" RenderTransformOrigin="0,0.627" Margin="10,21,689,433" Background="Transparent" BorderBrush="Transparent">
                     <Image Source="Imagenes/flecha-correcta.png" Height="59" Width="53" RenderTransformOrigin="0.5,0.5">
                         <Image.RenderTransform>
                             <TransformGroup>
@@ -50,7 +50,7 @@
                     Margin="112,438,210,50" 
                     FontWeight="Medium"
                     FontFamily="Montserrat"
-                    HorizontalAlignment="Center" Width="466"><Run Text="Pon el nombre de la "/><Run Text="usuario "/><Run Text="que quieres eliminar "/></TextBlock>
+                    HorizontalAlignment="Center" Width="466" Text="Pon el nombre de el usuario que quieres eliminar "/>
                 <Button   BorderThickness="0"
                     Content="Eliminar Usuario"
                     Foreground="White"

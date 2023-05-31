@@ -25,7 +25,7 @@
                 </LinearGradientBrush>
             </Border.Background>
             <Grid>
-                <Button Name="btn5" Click="btn5_Click" RenderTransformOrigin="0,0.627" Margin="10,0,689,454" Grid.RowSpan="2" Background="Transparent" BorderBrush="Transparent">
+                <Button Name="btn5" Click="btn5_Click" RenderTransformOrigin="0,0.627" Margin="26,26,673,428" Background="Transparent" BorderBrush="Transparent">
                     <Image Source="Imagenes/flecha-correcta.png" Height="59" Width="53" RenderTransformOrigin="0.5,0.5">
                         <Image.RenderTransform>
                             <TransformGroup>
@@ -70,7 +70,7 @@
                 </Button>
                 <Button x:Name="Iniciar_Copy"                          
                     BorderThickness="0"
-                    Content="Imagenes"
+                    Content="Administrador de &#xD;&#xA;Imagenes"
                     Foreground="White"
                     FontSize="12"
                     FontFamily="Montserrat"

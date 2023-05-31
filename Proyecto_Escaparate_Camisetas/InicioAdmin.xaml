@@ -43,12 +43,12 @@
 
                 <Button x:Name="Escaparate"                        
                             BorderThickness="0"
-                            Content="usuario"
+                            Content="Administrador de &#xD;&#xA;usuario"
                             Foreground="White"
                             FontSize="12"
                             FontFamily="Montserrat"
                             Cursor="Hand"                           
-                            Margin="58,180,566,279"
+                            Margin="81,180,543,279"
                             Click="Button_Click">
                     <Button.Style>
                         <Style TargetType="Button">
@@ -73,12 +73,12 @@
                 </Button>
                 <Button x:Name="Iniciar_Copy"                          
                     BorderThickness="0"
-                    Content="Imagenes"
+                    Content="Administrador de&#xD;&#xA;Imagenes"
                     Foreground="White"
                     FontSize="12"
                     FontFamily="Montserrat"
                     Cursor="Hand"                           
-                    Margin="498,180,126,279"
+                    Margin="528,180,96,279"
                     Click="Button_Click_2">
                     <Button.Style>
                         <Style TargetType="{x:Type Button}">
@@ -103,13 +103,74 @@
                 </Button>
                 <Button                        
                     BorderThickness="0"
-                    Content="camiseta"
+                    Content="Administrador de &#xD;&#xA;camiseta"
                     Foreground="White"
                     FontSize="12"
                     FontFamily="Montserrat"
                     Cursor="Hand"                           
-                    Margin="264,180,360,279"
+                    Margin="293,180,331,279"
                     Click="Button_Click_1">
+                    <Button.Style>
+                        <Style TargetType="{x:Type Button}">
+                            <Setter Property="Background" Value="#462AD8"/>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#28AEED"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+                    <Button.Template>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Border Width="150" Height="40"
+                                CornerRadius="20"
+                                Background="{TemplateBinding Background}">
+                                <ContentPresenter VerticalAlignment="Center"
+                                    HorizontalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <Button x:Name="Escaparate_Copy" 
+                    BorderThickness="0"
+                    Content="Controlador de &#xD;&#xA;Camiseta"
+                    Foreground="White"
+                    FontSize="12"
+                    FontFamily="Montserrat"
+                    Cursor="Hand"                           
+                    Margin="184,297,440,162"
+                    Click="Escaparate_Copy_Click">
+                    <Button.Style>
+                        <Style TargetType="{x:Type Button}">
+                            <Setter Property="Background" Value="#462AD8"/>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#28AEED"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+                    <Button.Template>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Border Width="150" Height="40"
+                                CornerRadius="20"
+                                Background="{TemplateBinding Background}">
+                                <ContentPresenter VerticalAlignment="Center"
+                                    HorizontalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <Button x:Name="Escaparate_Copy1"                        
+                    BorderThickness="0"
+                     
+                    Content="Controlador de &#xD;&#xA;Imagen"
+                    Foreground="White"
+                    FontSize="12"
+                    FontFamily="Montserrat"
+                    Cursor="Hand"                           
+                    Margin="414,297,210,162"
+                    Click="Escaparate_Copy1_Click">
                     <Button.Style>
                         <Style TargetType="{x:Type Button}">
                             <Setter Property="Background" Value="#462AD8"/>

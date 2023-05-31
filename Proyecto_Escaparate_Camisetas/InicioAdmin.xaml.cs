@@ -38,5 +38,19 @@ namespace Proyecto_Escaparate_Camisetas {
             login.Show();
             this.Close();
         }
+
+        private void Escaparate_Copy_Click(object sender, RoutedEventArgs e)
+        {
+            ControladorCamiseta administrador = new ControladorCamiseta();
+            administrador.Show();
+            this.Close();
+        }
+
+        private void Escaparate_Copy1_Click(object sender, RoutedEventArgs e)
+        {
+            ControladorImagen administrador = new ControladorImagen();
+            administrador.Show();
+            this.Close();
+        }
     }
 }
