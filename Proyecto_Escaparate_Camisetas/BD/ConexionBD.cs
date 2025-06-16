@@ -14,11 +14,11 @@ namespace Proyecto_Escaparate_Camisetas.BD {
 
 
 
-         string cadenaConexion = "Server=proyectoescaparate.mysql.database.azure.com;UserID=Pablo;Password=Nexus@1234;" +
-             "Database=proyectocamiseta;SslMode=Required;SslCa=Conexión\\BaltimoreCyberTrustRoot.crt.pem;";
+        // string cadenaConexion = "Server=proyectoescaparate.mysql.database.azure.com;UserID=Pablo;Password=Nexus@1234;" +
+         //    "Database=proyectocamiseta;SslMode=Required;SslCa=Conexión\\BaltimoreCyberTrustRoot.crt.pem;";
 
         //cadena de conexion en local
-        // string cadenaConexion = "Database=" + bd + "; Data Source=" + server + "; User Id=" + usuario + "; Password=" + password + "";
+         string cadenaConexion = "Database=" + bd + "; Data Source=" + server + "; User Id=" + usuario + "; Password=" + password + "";
 
 
 
