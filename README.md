@@ -382,23 +382,7 @@ try {
 
 ---
 
-## 🤝 Contribución
 
-Este proyecto fue desarrollado como **Proyecto Final de DAM**. Para contribuir:
-
-1. **Fork** el repositorio
-2. Crear una rama para tu feature: `git checkout -b feature/nueva-funcionalidad`
-3. **Commit** tus cambios: `git commit -am 'Añadir nueva funcionalidad'`
-4. **Push** a la rama: `git push origin feature/nueva-funcionalidad`
-5. Crear un **Pull Request**
-
-### Estándares de Código:
-- Seguir convenciones de C# y .NET
-- Comentar código complejo
-- Mantener consistencia en nombres de variables
-- Documentar cambios importantes
-
----
 
 ## 📄 Licencia
 
@@ -434,9 +418,9 @@ SOFTWARE.
 
 **Proyecto Final DAM - Escaparate de Camisetas**
 
-- 📧 **Email:** [tu-email@ejemplo.com]
-- 🌐 **GitHub:** [tu-usuario-github]
-- 💼 **LinkedIn:** [tu-perfil-linkedin]
+- 📧 **Email:** [pablopianeloxd@gmail.com]
+- 🌐 **GitHub:** [[tu-usuario-github](https://github.com/PabloPianelo)]
+- 💼 **LinkedIn:** [[tu-perfil-linkedin](https://www.linkedin.com/in/pablopianeloalonso/)]
 
 ---
 
