@@ -419,8 +419,8 @@ SOFTWARE.
 **Proyecto Final DAM - Escaparate de Camisetas**
 
 - 📧 **Email:** [pablopianeloxd@gmail.com]
-- 🌐 **GitHub:** [[tu-usuario-github](https://github.com/PabloPianelo)]
-- 💼 **LinkedIn:** [[tu-perfil-linkedin](https://www.linkedin.com/in/pablopianeloalonso/)]
+- 🌐 **GitHub:** [[githubPablo](https://github.com/PabloPianelo)]
+- 💼 **LinkedIn:** [[linkedinPablo](https://www.linkedin.com/in/pablopianeloalonso/)]
 
 ---
 
